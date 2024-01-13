@@ -1,0 +1,2 @@
+trajin production.mdcrd
+rms first mass out prod_rmsd.out @N,CA,C time 4
