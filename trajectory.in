@@ -1,0 +1,11 @@
+trajin mdcrd.2mdheat
+trajin mdcrd.3md
+trajin mdcrd.4md
+trajin mdcrd.6md
+trajin mdcrd.7md
+trajin mdcrd.8md
+trajin mdcrd.9md
+trajin 10md_200ns.nc
+image familiar
+rms first @C,CA,N
+trajout production.mdcrd
