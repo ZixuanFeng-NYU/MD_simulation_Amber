@@ -12,11 +12,11 @@ def read_rmsd(rmsd_file):
         df['RMSD']=df['RMSD'].astype(float)
         df.loc[:700, 'Time(ns)'] = df['#Frame'][:701] * 0.01
         df.loc[700:900, 'Time(ns)'] = (df['#Frame'][700:901]-700)*1+7
-        df['Time(ns)']=df['Time(ns)'].astype(int)
+        df['Time(ns)']=df['Time(ns)'].astype(float)
         df.to_csv("rmsd_df.csv")
         plt.plot(df['Time(ns)'], df['RMSD'])
         plt.xlabel('Time(ns)')
-        plt.xticks(range(0, max(df['Time(ns)'])+1, 40))
+        plt.xticks(range(0, int(max(df['Time(ns)']))+1, 40))
         plt.ylabel('RMSD')
         plt.title('RMSD vs Time(ns)')
         plt.savefig('rmsd_plot.png',dpi=600)
