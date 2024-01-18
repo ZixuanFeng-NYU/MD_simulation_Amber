@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 module load amber/openmpi/intel/20.11
-export CUDA_VISIBLE_DEVICES=0
+
 echo "starting 1min at 'date'"
 
 pmemd -O -i 1min.in\
